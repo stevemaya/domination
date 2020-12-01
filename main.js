@@ -12,7 +12,7 @@ function strikeThroughFirstLi() {
     firstListItem.style.textDecoration = 'line-through';
 }
 
-strikeThroughFirstLi();
+strikeThroughFirstLi(); 
 
 function removeLi() {
     document.querySelector('li:last-child').remove();
@@ -50,22 +50,3 @@ function changeFont(fontSize, id) {
 
 changeFont('30px', 'h1');
 
-function newLiWithText(todoText) {
-    const newTodo = document.createElement('li');
-    newTodo.innerText = todoText;
-
-    return newTodo;
-}
-
-const newTodo = newLiWithText('hello');
-appendUl(newTodo);
-
-function headerWithText(headerSize, text) {
-    const header = document.createElement(`h${headerSize}`);
-    header.innerText = text;
-
-    return header;
-}
-
-const newHeader = headerWithText(3, 'does this work?');
-appendUl(newHeader);
